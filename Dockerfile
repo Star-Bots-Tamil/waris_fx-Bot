@@ -6,4 +6,4 @@ COPY . /Auto-Filter-Bot
 
 RUN pip install -r requirements.txt
 
-CMD ["python", "m" "biisal"]
+CMD ["python", "-m" "biisal"]
