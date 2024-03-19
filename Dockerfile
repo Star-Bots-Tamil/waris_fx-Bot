@@ -1,9 +1,11 @@
-FROM python:3.11
+FROM python:3.9-alpine
 
-WORKDIR /Auto-Filter-Bot
+WORKDIR /app
 
-COPY . /Auto-Filter-Bot
+COPY requirements.txt ./
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "-m" "biisal"]
+COPY . .
+
+CMD ["python3","-m","biisal"]
