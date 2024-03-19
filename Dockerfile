@@ -1,11 +1,11 @@
-FROM python:3.9-alpine
+FROM python:3.10
 
 WORKDIR /app
 
-COPY requirements.txt ./
+COPY requirements.txt /app/
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-COPY . .
+COPY . /app
 
-CMD ["python3","-m","biisal"]
+CMD python -m biisal
