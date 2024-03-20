@@ -1,7 +1,6 @@
-#(c) Adarsh-Goel
-#(c) @biisal
 import os
 import asyncio
+import aiohttp
 from asyncio import TimeoutError
 from biisal.bot import StreamBot
 from biisal.utils.database import Database
@@ -16,7 +15,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from biisal.utils.file_properties import get_name, get_hash, get_media_file_size
 db = Database(Var.DATABASE_URL, Var.name)
 
-
 MY_PASS = os.environ.get("MY_PASS", None)
 pass_dict = {}
 pass_db = Database(Var.DATABASE_URL, "ag_passwords")
@@ -30,6 +28,8 @@ msg_text ="""<b>‣ ʏᴏᴜʀ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ! 😎
 🔗 ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ: {}
 
 🔗 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ: {} (ʏᴏᴜ ᴄᴀɴ ᴡᴀᴛᴄʜ ᴛʜᴇ ғɪʟᴇ/ᴠɪᴅᴇᴏ ɪɴ ᴍx ᴘʟᴀʏᴇʀ ᵒʳ ᴠʟᴄ ᵒʳ ᴇᴛc... ᴜsɪɴɢ ᴛʜɪs ʟɪɴᴋ)🤩
+
+🔗 Shortened Link :- {}
 
 ‣ ＧＥＴ <a href="https://t.me/MV_Rockers">ＭＯＲＥ ＦＩＬＥＳ</a></b> 🤡"""
 
@@ -90,10 +90,10 @@ async def private_receive_handler(c: Client, m: Message):
         log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-
+        shortened_link = await get_shortlink(online_link)
         await log_msg.reply_text(text=f"**RᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Stream ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True,  quote=True)
         await m.reply_text(
-            text=msg_text.format(get_name(log_msg), humanbytes(get_media_file_size(m)), online_link, stream_link),
+            text=msg_text.format(get_name(log_msg), humanbytes(get_media_file_size(m)), online_link, stream_link, shortened_link),
             quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📺 ᴡᴀᴛᴄʜ", url=stream_link), #Stream Link
@@ -104,7 +104,7 @@ async def private_receive_handler(c: Client, m: Message):
         await asyncio.sleep(e.x)
         await c.send_message(chat_id=Var.BIN_CHANNEL, text=f"Gᴏᴛ FʟᴏᴏᴅWᴀɪᴛ ᴏғ {str(e.x)}s from [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n\n**𝚄𝚜𝚎𝚛 𝙸𝙳 :** `{str(m.from_user.id)}`", disable_web_page_preview=True)
 
-@StreamBot.on_message(filters.channel & ~filters.group & (filters.document | filters.video | filters.photo)  & ~filters.forwarded, group=-1)
+@StreamBot.on_message(filters.channel & ~filters.group & (filters.document | filters.video)  & ~filters.forwarded, group=-1)
 async def channel_receive_handler(bot, broadcast):
     if int(broadcast.chat.id) in Var.BAN_CHNL:
         print("chat trying to get straming link is found in BAN_CHNL,so im not going to give stram link")
@@ -117,6 +117,7 @@ async def channel_receive_handler(bot, broadcast):
         log_msg = await broadcast.forward(chat_id=Var.BIN_CHANNEL)
         stream_link = f"{Var.URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         online_link = f"{Var.URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+        shortened_link = await get_shortlink(online_link)
         await log_msg.reply_text(
             text=f"**Channel Name:** `{broadcast.chat.title}`\n**CHANNEL ID:** `{broadcast.chat.id}`\n**Rᴇǫᴜᴇsᴛ ᴜʀʟ:** {stream_link}",
             quote=True
@@ -126,8 +127,8 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("📺 ᴡᴀᴛᴄʜ", url=stream_link),
-                    InlineKeyboardButton('📥 ᴅᴏᴡɴʟᴏᴀᴅ', url=online_link)] 
+                    [InlineKeyboardButton("📥 Fast Download Link", url=shortened_link)]
+#                    InlineKeyboardButton('📥 ᴅᴏᴡɴʟᴏᴀᴅ', url=online_link)] 
                 ]
             )
         )
