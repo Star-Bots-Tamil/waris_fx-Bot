@@ -33,7 +33,13 @@ msg_text ="""<b>‣ ʏᴏᴜʀ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ! 😎
 
 ‣ ＧＥＴ <a href="https://t.me/MV_Rockers">ＭＯＲＥ ＦＩＬＥＳ</a></b> 🤡"""
 
-
+async def get_shortlink(link):
+    url = 'https://tnshort.net/api'
+    params = {'api': "d03a53149bf186ac74d58ff80d916f7a79ae5745", 'url': link}
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+            data = await response.json()
+            return data["shortenedUrl"]
 
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) , group=4)
 async def private_receive_handler(c: Client, m: Message):
