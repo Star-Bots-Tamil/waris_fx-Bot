@@ -27,11 +27,12 @@ msg_text ="""<b>‣ ʏᴏᴜʀ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ! 😎
 
 🔗 ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ: {}
 
-🔗 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ: {} (ʏᴏᴜ ᴄᴀɴ ᴡᴀᴛᴄʜ ᴛʜᴇ ғɪʟᴇ/ᴠɪᴅᴇᴏ ɪɴ ᴍx ᴘʟᴀʏᴇʀ ᵒʳ ᴠʟᴄ ᵒʳ ᴇᴛc... ᴜsɪɴɢ ᴛʜɪs ʟɪɴᴋ)🤩
+🔗 ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ: {} 
+(ʏᴏᴜ ᴄᴀɴ ᴡᴀᴛᴄʜ ᴛʜᴇ ғɪʟᴇ/ᴠɪᴅᴇᴏ ɪɴ ᴍx ᴘʟᴀʏᴇʀ ᵒʳ ᴠʟᴄ ᵒʳ ᴇᴛc... ᴜsɪɴɢ ᴛʜɪs ʟɪɴᴋ)🤩
 
 🔗 Shortened Link :- {}
 
-‣ ＧＥＴ <a href="https://t.me/MV_Rockers">ＭＯＲＥ ＦＩＬＥＳ</a></b> 🤡"""
+‣ ＧＥＴ <a href="https://t.me/Star_Bots_Tamil">ＭＯＲＥ ＦＩＬＥＳ</a></b> 🤡"""
 
 async def get_shortlink(link):
     url = 'https://tnshort.net/api'
@@ -63,7 +64,7 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_photo(
                 chat_id=m.chat.id,
-                photo="https://telegra.ph/file/5eb253f28ed7ed68cb4e6.png",
+                photo="https://graph.org/file/1412d9f93d77c350d8268.jpg",
                 caption=""""<b>Hᴇʏ ᴛʜᴇʀᴇ!\n\nPʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍᴇ ! 😊\n\nDᴜᴇ ᴛᴏ sᴇʀᴠᴇʀ ᴏᴠᴇʀʟᴏᴀᴅ, ᴏɴʟʏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ʙᴏᴛ !</b>""",
                 reply_markup=InlineKeyboardMarkup(
                     [
