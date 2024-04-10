@@ -3,7 +3,6 @@ from os import getenv, environ
 from dotenv import load_dotenv
 
 
-
 load_dotenv()
 bot_name = "File To Link Bot"
 mv_rockers = "https://t.me/Star_Moviess_Tamil"
@@ -13,7 +12,7 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '11973721'))
     API_HASH = str(getenv('API_HASH', '5264bf4663e9159565603522f58d3c18'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN' , '5965670031:AAG5eLQkC2DRvrswV635iWvnR8-kRfge5wo'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN' , '5990559544:AAG_p3LeBXyukrykg5yjrVRyqqDEtimzDY0'))
     name = str(getenv('name', 'file2link_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '7'))
