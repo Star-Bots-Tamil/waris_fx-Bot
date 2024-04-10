@@ -12,12 +12,12 @@ class Var(object):
     MULTI_CLIENT = False
     API_ID = int(getenv('API_ID', '11973721'))
     API_HASH = str(getenv('API_HASH', '5264bf4663e9159565603522f58d3c18'))
-    BOT_TOKEN = str(getenv('BOT_TOKEN' , '5990559544:AAG_p3LeBXyukrykg5yjrVRyqqDEtimzDY0'))
+    BOT_TOKEN = str(getenv('BOT_TOKEN' , '7101615864:AAF6OgiiUhVNKu7Cligjiw_RgE2s2vt9YaA'))
     name = str(getenv('name', 'file2link_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '7'))
-    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1001871766752'))
-    NEW_USER_LOG = int(getenv('NEW_USER_LOG', '-1001821439025'))
+    BIN_CHANNEL = int(getenv('BIN_CHANNEL', '-1002086058491'))
+    NEW_USER_LOG = int(getenv('NEW_USER_LOG', '-1002119282902'))
     PORT = int(getenv('PORT', '8080'))
     BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', 'file-to-link-bot-gx9j.onrender.com')) # starmovies.onrender.com
     PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
@@ -37,7 +37,7 @@ class Var(object):
         URL = "https://{}/".format(FQDN)
     else:
         URL = "http://{}/".format(FQDN)
-    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://KarthikMovies:KarthikUK007@cluster0.4l5byki.mongodb.net/?retryWrites=true&w=majority'))
+    DATABASE_URL = str(getenv('DATABASE_URL', 'mongodb+srv://evamusicbot:mrwaris04@cluster0.5ad8zuj.mongodb.net/?retryWrites=true&w=majority'))
     UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', 'Star_Bots_Tamil')) 
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "")).split()))   
     BAN_CHNL = list(set(int(x) for x in str(getenv("BAN_CHNL", "")).split()))   
