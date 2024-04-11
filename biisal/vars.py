@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 bot_name = "File To Link Bot"
-mv_rockers = "https://t.me/Star_Moviess_Tamil"
-movie_laab = "https://t.me/Star_Bots_Tamil"
+movies_channel = "https://t.me/Star_Moviess_Tamil"
+bot_channel = "https://t.me/Star_Bots_Tamil"
 
 class Var(object):
     MULTI_CLIENT = False
