@@ -2,14 +2,14 @@
 
 [![Click Here](https://img.shields.io/badge/Demo%20Bot-blue?style=flat&logo=telegram&labelColor=white&link=https://t.me/FileToSpeedLink_Bot)](https://t.me/FileToSpeedLink_Bot)
 
-[![Follow Instagram](https://img.shields.io/badge/-Follow%20Instagram-dd0a5e?style=flat&logo=instagram&labelColor=white&link=https://www.instagram.com/nihh____al)](https://www.instagram.com/nihh____al)
+[![Follow Instagram](https://img.shields.io/badge/-Follow%20Instagram-dd0a5e?style=flat&logo=instagram&labelColor=white&link=https://www.instagram.com/StarBotsTamil)](https://www.instagram.com/StarBotsTamil)
 
-[![Join WhatsApp Channel](https://img.shields.io/badge/-Whatsapp%20Channel-25g356?style=flat&logo=whatsapp&labelColor=white&link=https://whatsapp.com/channel/0029VaLe9dSGk1G2sHAqbR0s)](https://whatsapp.com/channel/0029VaLe9dSGk1G2sHAqbR0s)
+[![Join Telegram Channel](https://img.shields.io/badge/-Whatsapp%20Channel-25g356?style=flat&logo=whatsapp&labelColor=white&link=https://whatsapp.com/channel/0029VaLe9dSGk1G2sHAqbR0s)](https://t.me/Star_Moviess_Tamil)
 
 
 <h1 align="center"></h1>
 <p align="center"> 
- <a href="https://t.me/FileToSpeedLink_Bot"><img src="https://telegra.ph/file/2d9f6de853dbd31cb3774.jpg" alt="Cover Image" width="200"></a>
+ <a href="https://t.me/File_to_Link_Star_Bot"><img src="https://telegra.ph/file/2d9f6de853dbd31cb3774.jpg" alt="Cover Image" width="200"></a>
   
   
  <p align="center">
@@ -41,7 +41,7 @@
       <summary><b>Deploy to Heroku<b></summary>
       Click the button below to deploy the bot on Heroku:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/darkhacker34/File-To-Link)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Star-Bots-Tamil/waris_fx-Bot)
 
   </details>
   <details>
@@ -128,10 +128,10 @@ To get an instant stream link, just forward any media to the bot and boom, its �
 
 
 ### Channel Support
-Bot also Supported with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with **Get Download Link** Button. </details>
+Bot also Supported with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with **📥 Fast Download Link** Button. </details>
 
 ### Credits : 
 
-- [𝙉𝙄𝙃𝘼𝙇](https://github.com/darkhacker34)
+- [karthik](https://github.com/Star-Bots-Tamil)
 - [Adarsh](https://github.com/adarsh-goel)
 - Everyone In This Journey !
