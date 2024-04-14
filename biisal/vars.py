@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 bot_name = "File To Link Bot"
-movies_channel = "https://t.me/Star_Moviess_Tamil"
-bot_channel = "https://t.me/Star_Bots_Tamil"
+movies_channel = "https://t.me/XstreamPlexApp"
+bot_channel = "https://t.me/XstreamPlexApp"
 
 class Var(object):
     MULTI_CLIENT = False
