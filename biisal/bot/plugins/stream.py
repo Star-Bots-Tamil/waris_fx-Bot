@@ -34,7 +34,7 @@ msg_text ="""<b>‣ ʏᴏᴜʀ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ! 😎
 
 🔗 Shortened Link :- {}
 
-‣ ＧＥＴ <a href="https://t.me/Star_Bots_Tamil">ＭＯＲＥ ＦＩＬＥＳ</a></b> 🤡"""
+‣ ＧＥＴ <a href="https://t.me/XstreamPlexApp">ＭＯＲＥ ＦＩＬＥＳ</a></b> 🤡"""
 
 async def get_shortlink(link):
     url = 'https://tnshort.net/api'
@@ -58,7 +58,7 @@ async def private_receive_handler(c: Client, m: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=m.chat.id,
-                    text="You are banned!\n\n  **𝙲𝚘𝚗𝚍𝚊𝚌𝚝 𝙰𝚍𝚖𝚒𝚗 [Support](https://t.me/nihh_all) 𝙷𝙴 Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**",
+                    text="You are banned!\n\n  **𝙲𝚘𝚗𝚍𝚊𝚌𝚝 𝙰𝚍𝚖𝚒𝚗 [Support](https://t.me/XstreamPlexApp) 𝙷𝙴 Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**",
                     
                     disable_web_page_preview=True
                 )
@@ -66,7 +66,7 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_photo(
                 chat_id=m.chat.id,
-                photo="https://graph.org/file/1412d9f93d77c350d8268.jpg",
+                photo="https://telegra.ph/file/d5358c20969f273cce1cc.jpg",
                 caption=""""<b>Hᴇʏ ᴛʜᴇʀᴇ!\n\nPʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍᴇ ! 😊\n\nDᴜᴇ ᴛᴏ sᴇʀᴠᴇʀ ᴏᴠᴇʀʟᴏᴀᴅ, ᴏɴʟʏ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ʙᴏᴛ !</b>""",
                 reply_markup=InlineKeyboardMarkup(
                     [
@@ -82,7 +82,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ** [Support](https://t.me/nihh_all)",
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ** [Support](https://t.me/XstreamPlexApp)",
                 
                 disable_web_page_preview=True)
             return
