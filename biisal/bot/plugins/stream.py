@@ -46,8 +46,8 @@ async def get_shortlink(link):
 
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) , group=4)
 async def private_receive_handler(c: Client, m: Message):
-    if Var.ALLOWED_USERS and not ((str(msg.from_user.id) in Var.ALLOWED_USERS) or (msg.from_user.username in Var.ALLOWED_USERS)):
-        return await msg.reply(
+    if Var.ALLOWED_USERS and not ((str(m.from_user.id) in Var.ALLOWED_USERS) or (m.from_user.username in Var.ALLOWED_USERS)):
+        return await m.reply(
             "<b>You are not in the Allowed list of Users who can Use me. \
             Contact Owner <a href='https://t.me/waris_fx'>🇯 🇴 🇪</a></b>",
             disable_web_page_preview=True, quote=True
