@@ -21,10 +21,10 @@ Sᴇɴᴅ ᴍᴇ ᴀɴʏ ғɪʟᴇ ᴀɴᴅ ɢᴇᴛ ᴀ ᴅɪʀᴇᴄᴛ 𝗗�
 
 @StreamBot.on_message(filters.command("start") & filters.private)
 async def start(b, m):
-    if Var.ALLOWED_USERS and not ((str(msg.from_user.id) in Var.ALLOWED_USERS) or (msg.from_user.username in Var.ALLOWED_USERS)):
-        return await msg.reply(
+    if Var.ALLOWED_USERS and not ((str(m.from_user.id) in Var.ALLOWED_USERS) or (m.from_user.username in Var.ALLOWED_USERS)):
+        return await m.reply(
             "<b>You are not in the Allowed list of Users who can Use me. \
-            Contact Owner <a href='https://t.me/waris_fx'>🇯 🇴 🇪</a></b>",
+            Contact Owner :- <a href='https://t.me/waris_fx'>🇯 🇴 🇪</a></b>",
             disable_web_page_preview=True, quote=True
         )
     if not await db.is_user_exist(m.from_user.id):
@@ -87,8 +87,8 @@ async def start(b, m):
 )
 @StreamBot.on_message(filters.command("help") & filters.private )
 async def help_cd(b, m):
-    if Var.ALLOWED_USERS and not ((str(msg.from_user.id) in Var.ALLOWED_USERS) or (msg.from_user.username in Var.ALLOWED_USERS)):
-        return await msg.reply(
+    if Var.ALLOWED_USERS and not ((str(m.from_user.id) in Var.ALLOWED_USERS) or (m.from_user.username in Var.ALLOWED_USERS)):
+        return await m.reply(
             "<b>You are not in the Allowed list of Users who can Use me. \
             Contact Owner <a href='https://t.me/waris_fx'>🇯 🇴 🇪</a></b>",
             disable_web_page_preview=True, quote=True
