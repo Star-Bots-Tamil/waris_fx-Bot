@@ -13,7 +13,7 @@ class Var(object):
     API_ID = int(getenv('API_ID', '11973721'))
     API_HASH = str(getenv('API_HASH', '5264bf4663e9159565603522f58d3c18'))
     BOT_TOKEN = str(getenv('BOT_TOKEN' , '7101615864:AAF6OgiiUhVNKu7Cligjiw_RgE2s2vt9YaA'))
-    ALLOWED_USERS = [x.strip("@ ") for x in str(environ.get("ALLOWED_USERS", "5104199504 1938532284 6798882737") or "").split(",") if x.strip("@ ")]
+    ALLOWED_USERS = [x.strip("@ ") for x in str(environ.get("ALLOWED_USERS", "5104199504, 1938532284, 6798882737") or "").split(",") if x.strip("@ ")]
     name = str(getenv('name', 'file2link_bot'))
     SLEEP_THRESHOLD = int(getenv('SLEEP_THRESHOLD', '60'))
     WORKERS = int(getenv('WORKERS', '7'))
